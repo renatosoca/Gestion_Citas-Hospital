@@ -23,6 +23,10 @@
 
     <!-- CALENDARIO DE AYUDA-->
     <link rel="stylesheet" href="/build/css/calendar.css">
+     <!-- TABLA DINAMICA -->
+  <script src="/build/js/vendor/jquery-3.6.0.min.js" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css"
+              href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
 
 </head>
 
@@ -157,6 +161,36 @@
             console.log(calendar2.value().format('LLL'));
         });
     </script>
-</body>
 
+    <!-- TABLA DINÁMICA-->
+    <script type="text/javascript" charset="utf8" 
+        src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
+</body>
+<!-- TABLA DINÁMICA-->
+<script type="text/javascript">
+            $(document).ready(function () {
+            $('#dataTable1').DataTable(
+                    {
+                        "aLengthMenu": [[3, 5, 10, 25, 50, 75, -1], 
+                                       [3, 5, 10, 25, 50, 75, "Todo"]],
+                        "iDisplayLength": 3,
+                        language: {
+                            "sProcessing": "Procesando...",
+                            searh: "Buscar",
+                            "sInfo": "Mostrando resultados _START_-_END_ de  _TOTAL_",
+                            "sInfoEmpty": "Mostrando resultados del 0 al 0 de un total de 0 registros",
+                            "sInfoFiltered": "(filtrado de un total de MAX registros)",
+                            "sSearch": "Buscar:",
+                            "sLoadingRecords": "Cargando...",
+                            "oPaginate": {
+                                "sFirst": "Primero",
+                                "sLast": "Último",
+                                 "sNext": "Siguiente",
+                                "sPrevious": "Anterior"
+                            },
+                        }
+                    }
+            );
+        });
+    </script>
 </html>
