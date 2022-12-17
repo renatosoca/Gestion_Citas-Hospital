@@ -38,6 +38,12 @@
           <i class="fas fa-user-plus"> </i>
           Agregar Paciente
         </button>
+        <a href="#" class="btn btn-primary" onclick="window.print()">
+          <i class="fas fa-download fa-sm text-white-50"></i> Generar Reporte
+        </a>
+        <a href="#" class="btn btn-primary" onclick="excel_paciente.php">
+          <i class="fas fa-download fa-sm text-white-50"></i> Generar Excel
+        </a>
       </div>
 
       <!-- TABLA DE PACIENTES -->
